@@ -9,11 +9,9 @@ package firsthue;
  *
  * @author Marcel.Lindinger
  */
-public class EratosthenesPrimeSieve implements PrimeSieve {
+public interface PrimeSieve {
 
-    @Override
-    public boolean isPrime(int P);
+    public boolean isPrime(int p);
 
-    @Override
     public void printPrimes();
 }
