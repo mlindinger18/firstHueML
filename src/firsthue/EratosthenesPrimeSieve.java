@@ -18,13 +18,36 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     }
 
     @Override
-    public boolean isPrime(int p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public void printPrimes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int i = 0;
+        int number = 0;
+        String primeNumbers = "";
+        for (i = 1; i <= obergrenze; i++) {
+            int counter = 0;
+            for (number = i; number >= 1; number--) {
+                if (i % number == 0) {
+                    counter = counter + 1;
+                }
+            }
+            if (counter == 2) {
+                primeNumbers = primeNumbers + i + " ";
+            }
+        }
+        System.out.println("Primzahlen von 1 - " + obergrenze + "sind: " + primeNumbers);
     }
 
 }
