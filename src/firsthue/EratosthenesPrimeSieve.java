@@ -11,9 +11,20 @@ package firsthue;
  */
 public class EratosthenesPrimeSieve implements PrimeSieve {
 
-    @Override
-    public boolean isPrime(int P);
+    public final int obergrenze;
+
+    public EratosthenesPrimeSieve(int obergrenze) {
+        this.obergrenze = obergrenze;
+    }
 
     @Override
-    public void printPrimes();
+    public boolean isPrime(int p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void printPrimes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
