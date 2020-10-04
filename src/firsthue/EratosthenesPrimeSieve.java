@@ -17,6 +17,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         this.obergrenze = obergrenze;
     }
 
+    //Aufgabe 1
     @Override
     public boolean isPrime(int number) {
         if (number <= 1) {
@@ -50,4 +51,11 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         System.out.println("Primzahlen von 1 - " + obergrenze + "sind: " + primeNumbers);
     }
 
+    //Aufgabe 2
+    public void Rechner() {
+        for (int i = 2; i < obergrenze; i++) {
+            int number = 2;
+
+        }
+    }
 }
