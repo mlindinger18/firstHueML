@@ -59,9 +59,9 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     //Aufgabe 2
     //Obere und Untere Schleife durchlaufen, um sich in der Mitte zu treffen(Beide Werte werden immer addiert und es wird gecheckt, ob die Zahl gerade ist)
     public void Rechner() {
-        for (int i = 0; i < obergrenze; i++) {
+        for (int i = primesList.size(); i < obergrenze; i++) {
             int value1 = primesList.indexOf(i);
-            for (int j = obergrenze; j < obergrenze; j--) {
+            for (int j = primesList.size(); j < obergrenze; j--) {
                 int value2 = primesList.indexOf(j);
                 i = value1 + value2;
                 if (i % 2 == 0) {
