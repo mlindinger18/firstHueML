@@ -5,6 +5,9 @@
  */
 package firsthue;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Marcel.Lindinger
@@ -12,6 +15,7 @@ package firsthue;
 public class EratosthenesPrimeSieve implements PrimeSieve {
 
     public final int obergrenze;
+    List primesList = new ArrayList();
 
     public EratosthenesPrimeSieve(int obergrenze) {
         this.obergrenze = obergrenze;
@@ -46,15 +50,24 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             }
             if (counter == 2) {
                 primeNumbers = primeNumbers + i + " ";
+                primesList.add(primeNumbers);
             }
         }
         System.out.println("Primzahlen von 1 - " + obergrenze + "sind: " + primeNumbers);
     }
 
     //Aufgabe 2
+    //Obere und Untere Schleife durchlaufen, um sich in der Mitte zu treffen(Beide Werte werden immer addiert und es wird gecheckt, ob die Zahl gerade ist)
     public void Rechner() {
-        for (int i = 2; i < obergrenze; i++) {
-            int number = 2;
+        for (int i = 0; i < obergrenze; i++) {
+            int value1 = primesList.indexOf(i);
+            for (int j = obergrenze; j < obergrenze; j--) {
+                int value2 = primesList.indexOf(j);
+                i = value1 + value2;
+                if (i % 2 == 0) {
+                    System.out.println("Zahl " + i + ": " + value1 + " + " + value2);
+                }
+            }
 
         }
     }
